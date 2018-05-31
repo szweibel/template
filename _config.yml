@@ -18,7 +18,9 @@ apply-link:
 
 
 # source: ./
-destination: _site
+# this tells Jekyll to build the site in the "docs"
+# directory, which is ideal for hosting by GitHub Pages
+destination: docs
 # baseurl: /gcdrb
 exclude:
   - '*.sh'
