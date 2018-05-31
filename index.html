@@ -6,55 +6,51 @@ title: Digital Humanities Research Institute
 <!DOCTYPE html>
 <html lang="en">
 
-{% include head.html %}
+  {% include head.html %}
 
   <body id="page-top">
 
     <!-- Navigation -->
-{% include nav.html %}
+    {% include nav.html %}
+
 
     <header class="masthead text-center text-white d-flex">
       <div class="container my-auto">
         <div class="row">
           <div class="col-lg-10 mx-auto">
-      <h1 class="display-0 text-accent p-b-3"></h1>
-
             <h1 class="text-uppercase">
 	      {{ site.title }}
-              <!-- <strong>Digital Humanities<br> Research Institute</strong> -->
             </h1>
-            <hr>
+            <hr class="light my-4">
           </div>
           <div class="col-lg-8 mx-auto">
-            <p class="text-faded mb-5">
-	      Expanding communities of <br> digital humanities practice
-	    </p>
 
-      <h2 class="text-white">June 11-20, 2018</h2>
-      <h2 class="text-white"><a class="text-white" href="https://www.gc.cuny.edu">The Graduate Center, CUNY</a></h2><br>
-      <h3 class="text-white m-b-3">Hosted by<br> <a class="text-white" href="https://gcdi.commons.gc.cuny.edu/">Graduate Center Digital Initiatives</a> <br>and the <a href="https://cuny.is/gcdigitalfellows">GC Digital Fellows</a></h3>
+	    <h2 class="text-white">{{ site.date-range }}</h2>
+	    <h2 class="text-white">Hosted by <a class="text-white" href="{{ site.host-institution-url }}">{{ site.host-institution }}</a></h2><br>
 
-            <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Apply Now</a>
+
+            <a class="btn btn-primary btn-xl js-scroll-trigger" href="{{ site.apply-link }}">Apply Now</a>
           </div>
         </div>
       </div>
     </header>
 
 
-  <section class="bg-primary" id="about">
-    <div class="container">
-      <div class="col-lg-12 mx-auto text-center">
-	<h2 class="section-heading text-white">
-	  What  is the Digital Humanities Research Institute?
-	</h2>
-        <hr class="light my-4">
+    <section class="bg-primary" id="about">
+      <div class="container">
+	<div class="col-lg-12 mx-auto text-center">
+	  <h2 class="section-heading text-white">
+	    What  is the Digital Humanities Research Institute?
+	  </h2>
+          <hr class="light my-4">
 
-	<div class="text-white">
-The Digital Humanities Research Institute (DHRI) is a ten-day residential workshop to be held from June 11 - 20, 2018 at The Graduate Center, CUNY. Participants will develop core computational research skills through hands-on workshops, explore interdisciplinary digital humanities research and teaching with leading DH scholars, and begin developing versions of the DHRI for their own communities. Over the following academic year, each participant will have access to an online network of peers, as well as 20 hours of consultation from our experienced staff while they lead their own DHRI. Participants will return to New York in June 2019 to report on their experiences and contribute to a guide to leading DHRIs in a variety of institutional contexts.
+	  <div class="text-white">
+	    The Digital Humanities Research Institute (DHRI) is a ten-day residential workshop to be held from June 11 - 20, 2018 at The Graduate Center, CUNY. Participants will develop core computational research skills through hands-on workshops, explore interdisciplinary digital humanities research and teaching with leading DH scholars, and begin developing versions of the DHRI for their own communities. Over the following academic year, each participant will have access to an online network of peers, as well as 20 hours of consultation from our experienced staff while they lead their own DHRI. Participants will return to New York in June 2019 to report on their experiences and contribute to a guide to leading DHRIs in a variety of institutional contexts.
 
+	  </div>
 	</div>
       </div>
-  </section>    
+    </section>    
 
 
 
@@ -78,7 +74,7 @@ The Digital Humanities Research Institute (DHRI) is a ten-day residential worksh
             <div class="service-box mt-5 mx-auto">
               <i class="fa fa-4x fa-connectdevelop text-primary mb-3 sr-icons"></i>
               <h3 class="mb-3">Build Community
-</h3>
+	      </h3>
               <p class="text-muted mb-0">
 		Engage with leaders who are passionate about using digital tools to enhance their work.
 	      </p>
@@ -88,7 +84,7 @@ The Digital Humanities Research Institute (DHRI) is a ten-day residential worksh
             <div class="service-box mt-5 mx-auto">
               <i class="fa fa-4x fa-laptop -primary mb-3 sr-icons"></i>
               <h3 class="mb-3">Learn New Skills
-</h3>
+	      </h3>
               <p class="text-muted mb-0">
 		Build technical and professional skills through collaborative and group-oriented workshops
 	      </p>
@@ -100,7 +96,7 @@ The Digital Humanities Research Institute (DHRI) is a ten-day residential worksh
 
               <i class="fa fa-4x fa-cogs text-primary mb-3 sr-icons"></i>
               <h3 class="mb-3">Share Resources
-</h3>
+	      </h3>
               <p class="text-muted mb-0">
 		Learn how to teach, adapt, and share our open curricula with others.
 	      </p>
@@ -116,50 +112,53 @@ The Digital Humanities Research Institute (DHRI) is a ten-day residential worksh
 
 
 
-  <section id="topics" class="bg-primary">
+    <section id="topics" class="bg-primary">
+      <div class="container">
+	<div class="row">
+	  <div class="col-lg-12 mx-auto text-center">
+	    <h2 class="section-heading text-white">What to Expect</h2>
+            <hr class="light my-4">
+          </div>
+	</div>
+
+	<div class="row">
+          <div class="col-md-5 col-xs-12">
+            <a class="no-animate" style="margin:0 0 10px 0;" href="{{ '/images/drb_74.jpg' | prepend: site.baseurl }}"><img class="img-fluid float-left img-thumbnail" src="{{ '/images/drb_74.jpg' | prepend: site.baseurl }}" alt="January 2016 Digital Research Bootcamp" /></a>
+          </div>
+          <div class="col-md-7 col-xs-12">
+            <p class="text-white">At DHRI you can expect an intensive, community-oriented, and foundational approach to learning technical skills in service of humanities teaching and learning. Through seminar-style discussions with leading scholars in digital humanities, hands-on workshops on core technical competencies, and project development labs, participants will become familiar with working from the command line, collaborating with git, programming with Python, querying structured data, creating maps, and analyzing texts computationally. You will also become part of a growing network of institute leaders by developing your own DHRI based on our open, core curriculum to be led at your home institution or organization.</p>
+          </div>
+	</div>
+      </div>
+    </section>
+
     <div class="container">
+      <br>
       <div class="row">
-	<div class="col-lg-12 mx-auto text-center">
-	  <h2 class="section-heading text-white">What to Expect</h2>
-        <hr class="light my-4">
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-5 col-xs-12">
-          <a class="no-animate" style="margin:0 0 10px 0;" href="{{ '/images/drb_74.jpg' | prepend: site.baseurl }}"><img class="img-fluid float-left img-thumbnail" src="{{ '/images/drb_74.jpg' | prepend: site.baseurl }}" alt="January 2016 Digital Research Bootcamp" /></a>
-        </div>
-        <div class="col-md-7 col-xs-12">
-          <p class="text-white">At DHRI you can expect an intensive, community-oriented, and foundational approach to learning technical skills in service of humanities teaching and learning. Through seminar-style discussions with leading scholars in digital humanities, hands-on workshops on core technical competencies, and project development labs, participants will become familiar with working from the command line, collaborating with git, programming with Python, querying structured data, creating maps, and analyzing texts computationally. You will also become part of a growing network of institute leaders by developing your own DHRI based on our open, core curriculum to be led at your home institution or organization.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="container">
-    <br>
-    <div class="row">
-      <div class="col-lg-6">
+	<div class="col-lg-6">
 	  <h2 class="section-heading ">About Us</h2>
 
           <p>GC Digital Initiatives builds and sustains an active community around the shared idea of a "Digital GC," where scholars and technologists explore new modes of inquiry that thoughtfully integrate digital tools and methods into the research, teaching, and service missions of the institution. Learn more on our <a href="https://gcdi.commons.gc.cuny.edu/about/">website</a>.</p>
 	  <br>
-      </div>
+	</div>
 
-      <div class="col-lg-6">
-        <h3>GC Digital Initiatives</h3>
-        <p>Digital Scholarship Lab, Room 7414<br />
-        The Graduate Center, CUNY<br />
-        365 Fifth Avenue<br />
-        New York, NY 10016<br />
-        <a href="https://cuny.is/gcdi">https://cuny.is/gcdi</a><br />
-        <a class="no-animate" href="https://twitter.com/cunydhi">@CUNYDHI</a>
-        <a class="no-animate" href="https://twitter.com/{{site.author.twitter}}">@Digital_Fellows</a>
+	<div class="col-lg-6">
+          <h3>GC Digital Initiatives</h3>
+          <p>Digital Scholarship Lab, Room 7414</p>
+          The Graduate Center, CUNY<br />
+          365 Fifth Avenue<br />
+          New York, NY 10016<br />
+          <a href="https://cuny.is/gcdi">https://cuny.is/gcdi</a><br />
+          <a class="no-animate" href="https://twitter.com/cunydhi">@CUNYDHI</a>
+          <a class="no-animate" href="https://twitter.com/{{site.author.twitter}}">{{ site.author.twitter }}</a>
+	</div>
       </div>
     </div>
-  </div>
 
-{% include scripts.html %}
+
+
+
+    {% include scripts.html %}
 
 
 
