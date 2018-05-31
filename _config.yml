@@ -1,5 +1,4 @@
-# Title, decryption, tagline and URL for your site
-# Can be used in your theme by calling 'site.title' and so on
+# Site Information
 name: Digital Humanities Research Institute
 description: Digital Humanities Research Institute
 url: dhinstitutes.org
@@ -17,11 +16,12 @@ author:
 apply-link: 
 
 
-# source: ./
 # this tells Jekyll to build the site in the "docs"
 # directory, which is ideal for hosting by GitHub Pages
 destination: docs
-# baseurl: /gcdrb
+
+
+# Files that won't be included in the compiled version of the site
 exclude:
   - '*.sh'
   - CNAME
