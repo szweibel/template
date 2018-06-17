@@ -19,8 +19,8 @@ author:
 
 
 
-
-# link-reference should be one short, descriptive word
+# A list of courses that appears on the curriculum page
+# Note that link-reference should be one short, descriptive word
 courses:
   - name: Command Line
     url: https://github.com/DHRI-Curriculum/command-line
@@ -93,9 +93,3 @@ incremental: false
 highlighter: rouge
 gist:
   noscript: false
-
-# Permalink structure and pagination options
-# permalink: pretty
-# paginate: 10
-# paginate_path: 'page:num'
-# excerpt_separator: '<!--more-->'
