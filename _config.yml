@@ -6,14 +6,18 @@ title: Digital Humanities Research Institute
 host-institution: the Graduate Center, CUNY
 host-institution-url: https://www.gc.cuny.edu
 date-range: June 11-20, 2018
-author:
-  name: GC Digital Fellows
-  email: info@dhinstitutes.org
-  uri: http://digitalfellows.commons.gc.cuny.edu
-  bio: GC Digital Fellows
-  twitter: \@Digital_Fellows
-  github: http://github.com/GCDigitalFellows
 apply-link: 
+author:
+  name: GC Digital Initiatives
+  email: info@dhinstitutes.org
+  url: https://gcdi.commons.gc.cuny.edu/
+  bio: GC Digital Fellows
+  twitter: Digital_Fellows
+  github: http://github.com/GCDigitalFellows
+  address: Digital Scholarship Lab, Room 7414<br>The Graduate Center, CUNY<br>365 Fifth Avenue<br />New York, NY 10016<br>
+  description: <p>GC Digital Initiatives builds and sustains an active community around the shared idea of a "Digital GC," where scholars and technologists explore new modes of inquiry that thoughtfully integrate digital tools and methods into the research, teaching, and service missions of the institution. Learn more on our <a href="https://gcdi.commons.gc.cuny.edu/about/">website</a>.</p>
+
+
 
 
 # link-reference should be one short, descriptive word
