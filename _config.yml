@@ -1,4 +1,5 @@
 # Site Information
+
 name: Digital Humanities Research Institute
 description: Digital Humanities Research Institute
 url: dhinstitutes.org
@@ -11,11 +12,10 @@ author:
   name: GC Digital Initiatives
   email: info@dhinstitutes.org
   url: https://gcdi.commons.gc.cuny.edu/
-  bio: GC Digital Fellows
   twitter: Digital_Fellows
   github: http://github.com/GCDigitalFellows
   address: Digital Scholarship Lab, Room 7414<br>The Graduate Center, CUNY<br>365 Fifth Avenue<br />New York, NY 10016<br>
-  description: <p>GC Digital Initiatives builds and sustains an active community around the shared idea of a "Digital GC," where scholars and technologists explore new modes of inquiry that thoughtfully integrate digital tools and methods into the research, teaching, and service missions of the institution. Learn more on our <a href="https://gcdi.commons.gc.cuny.edu/about/">website</a>.</p>
+  description: GC Digital Initiatives builds and sustains an active community around the shared idea of a "Digital GC," where scholars and technologists explore new modes of inquiry that thoughtfully integrate digital tools and methods into the research, teaching, and service missions of the institution. Learn more on our <a href="https://gcdi.commons.gc.cuny.edu/about/">website</a>.
 
 
 
