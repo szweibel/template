@@ -16,6 +16,49 @@ author:
 apply-link: 
 
 
+# link-reference should be one short, descriptive word
+courses:
+  - name: Command Line
+    url: https://github.com/DHRI-Curriculum/command-line
+    link-reference: terminal
+    description: Introduction to the UNIX command line. Topics covered will include navigating the filesystem, manipulating the environment, executing useful commands, and using pipes to communicate between programs. This session will teach you how to communicate directly with your computer’s operating system using a text-based interface and is a useful first step in learning many other technical skills.
+  - name: Git
+    url: https://github.com/DHRI-Curriculum/git
+    link-reference: git
+    description: Git is a tool for managing changes to a set of files. It allows users to access open source repositories, recover earlier versions of a project, and collaborate with other contributors. This session will be beneficial to anyone working with data, code, or text.
+  - name: Python
+    url: https://github.com/DHRI-Curriculum/python
+    link-reference:  python
+    description: Python is a programming language that can be used for a wide range of tasks, including collecting and analyzing data in a variety of formats, building web applications, and much more. It is likely the most popular language for academic researchers because of its flexibility and adaptability.
+  - name: Databases
+    url: https://github.com/DHRI-Curriculum/databases
+    link-reference: databases
+    description: Databases are invaluable tools for organization and are better than a spreadsheet for working with multiple data sets, asking questions, and adding structure to your data. SQL is a programming language for working with databases. This workshop will introduce you to the basics of SQL, and will include hands-on practice creating databases and tables, importing data, and querying the database.
+  - name: Text Analysis
+    url: https://github.com/DHRI-Curriculum/text-analysis
+    link-reference: text
+    description: This session will introduce text analysis and text classification in Python using The Natural Language Toolkit (NLTK) library and scikit-learn. Through attending this session, you will learn how to use Python to analyze large amounts of text (i.e., literary works, social media corpora, etc.) to find word frequencies, collocations, and learn the basics of text classification with machine learning. This session is designed for researchers who work with various forms of text-based data.
+  - name: Mapping
+    url: https://github.com/DHRI-Curriculum/mapping
+    link-reference: mapping
+    description: This session introduces simple yet powerful ways of displaying spatial information through CartoDB and QGIS. This session will be of particular interest both to researchers working with spatial information as well as anyone interested in storytelling with maps.
+  - name: Machine Learning 
+    url: https://github.com/DHRI-Curriculum/machine-learning
+    link-reference: ml
+    description: Machine learning is an application of artificial intelligence (AI) that provides systems the ability to automatically learn and improve from experience without being explicitly programmed.
+  - name: HTML & CSS
+    url: https://github.com/DHRI-Curriculum/html-css
+    link-reference: html
+    description: Modern web pages are created using HTML to control content, CSS to control appearance, and JavaScript to dictate behavior. This session will be helpful for anyone that wants to build on the web.
+  - name: Twitter API
+    url: https://github.com/DHRI-Curriculum/twitter-api
+    link-reference: twitter
+    description: This session will cover the basics of accessing data via the Twitter API. including specific challenges that arise when working with large, text-based data sets. This session will be beneficial for anyone who wants to collect data from Twitter or other social networks.
+  - name: Digital Ethics
+    url: https://github.com/DHRI-Curriculum/ethics
+    link-reference: ethics
+    description: A discussion of digital ethics with an emphasis on social justice, transparency, and accessibility.
+
 # this tells Jekyll to build the site in the "docs"
 # directory, which is ideal for hosting by GitHub Pages
 destination: docs

@@ -1,5 +1,5 @@
 ---
-title: About
+title: Curriculum
 layout: default
 ---
 
@@ -18,265 +18,41 @@ layout: default
 
       <p>Below is a preliminary list of technical workshops that will be offered during the GC Digital Humanities Research Institute. Workshops build on each other such that successive workshops use skills developed in earlier ones. All participants attend workshops on core skills, then choose which skills they wish to develop further through advanced workshops. Workshop descriptions are subject to small changes before June.</p>
 
-
     </div>
   </div>
 
     <div class="col-md-6 curriculum-box-offset offset-md-3">
       <table class="table table-striped" id="top">
-        
-        <tr>
-          <td>Command Line</td>
-          <td><a href="#terminal" class="page-scroll">details</a></td>
-          <td><a href="https://github.com/mckinniburgh/intro-command-line" target="_blank">repo</a></td>
-          
-          <td><a href="' | prepend: site.baseurl }}">schedule</a></td>
-        </tr>
-        
-        <tr>
-          <td>Git</td>
-          <td><a href="#git" class="page-scroll">details</a></td>
-          <td><a href="https://github.com/jojokarlin/Git_DRI_Jan_2017" target="_blank">repo</a></td>
-          
-          <td><a href="' | prepend: site.baseurl }}">schedule</a></td>
-        </tr>
-        
-        <tr>
-          <td>Python</td>
-          <td><a href="#python" class="page-scroll">details</a></td>
-          <td><a href="https://github.com/smythp/intro-python-workshop" target="_blank">repo</a></td>
-          
-          <td><a href="' | prepend: site.baseurl }}">schedule</a></td>
-        </tr>
-        
-        <tr>
-          <td>Databases</td>
-          <td><a href="#databases" class="page-scroll">details</a></td>
-          <td><a href="https://github.com/itphillips/GCDRI_databases" target="_blank">repo</a></td>
-          
-          <td><a href="' | prepend: site.baseurl }}">schedule</a></td>
-        </tr>
-        
-        <tr>
-          <td>Text Analysis</td>
-          <td><a href="#text" class="page-scroll">details</a></td>
-          <td><a href="https://github.com/ssdd3/DigitalFellows" target="_blank">repo</a></td>
-          
-          <td><a href="' | prepend: site.baseurl }}">schedule</a></td>
-        </tr>
-        
-        <tr>
-          <td>Mapping</td>
-          <td><a href="#map" class="page-scroll">details</a></td>
-          <td><a href="https://github.com/GCDigitalFellows/Mapping" target="_blank">repo</a></td>
-          
-          <td><a href="' | prepend: site.baseurl }}">schedule</a></td>
-        </tr>
-        
-        <tr>
-          <td>Machine Learning</td>
-          <td><a href="#ml" class="page-scroll">details</a></td>
-          <td><a href="https://github.com/GCDigitalFellows/gcdri_ts_cat_ml" target="_blank">repo</a></td>
-          
-          <td><a href="' | prepend: site.baseurl }}">schedule</a></td>
-        </tr>
-        
-        <tr>
-          <td>HTML and CSS</td>
-          <td><a href="#html" class="page-scroll">details</a></td>
-          <td><a href="https://github.com/GCDigitalFellows/Jan17-HTMLCSS" target="_blank">repo</a></td>
-          
-          <td><a href="' | prepend: site.baseurl }}">schedule</a></td>
-        </tr>
-        
-        <tr>
-          <td>Twitter API</td>
-          <td><a href="#twit" class="page-scroll">details</a></td>
-          <td><a href="https://github.com/smythp/twitter-workshop" target="_blank">repo</a></td>
-          
-          <td><a href="' | prepend: site.baseurl }}">schedule</a></td>
-        </tr>
-        
-        <tr>
-          <td>Digital Ethics</td>
-          <td><a href="#ethics" class="page-scroll">details</a></td>
-          <td><a href="https://github.com/kchatlosh/Ethics_DRI_Jan_2017" target="_blank">repo</a></td>
-          
-          <td><a href="' | prepend: site.baseurl }}">schedule</a></td>
-        </tr>
-        
+
+
+	{% for course in site.courses %}
+	<tr>
+	  <td>{{ course.name }}</td>
+	  <td><a href="#{{ course.link-reference }}">details</a></td>
+	  <td><a href="{{ course.url }}" target="_blank">repo</a></td>
+	</tr>
+      {% endfor %}
+
       </table>
     </div>
 
+{% for course in site.courses %}
   <div class="row">
     <div class="col-md-8 offset-md-2">
-      
-
-      <div class="card" id="terminal">        
+      <div class="card" id="{{ course.link-reference }}">
         <div class="card-block">
-          <div class="btn-group btn-group-sm pull-right" role="group" aria-label="Command Line">
-
-            <a href="/schedule.html" class="btn btn-primary"><i class="fa fa-calendar"></i></a>
-	    <a href="#page-top" class="btn btn-primary page-scroll"><i class="fa icon-shell"></i></a>
-            <!--a href="#page-top" class="btn btn-primary page-scroll"><i class="fa fa-chevron-up"></i></a-->
-            <a href="https://github.com/mckinniburgh/intro-command-line" class="btn btn-primary"><i class="fa fa-github"></i></a>
+          <div class="btn-group btn-group-sm pull-right" role="group" aria-label="{{ course.name }}">
+            <a href="{{ course.url }}" class="btn btn-primary"><i class="fa fa-github"></i></a>
+            <a href="#content" }}" class="btn btn-primary"><i class="fa fa-chevron-up"></i></a>
           </div>
-          <h4 class="card-title"><a
-              href="#terminal">Command Line</a></h4>
+          <h4 class="card-title"><a href="{{ course.link-reference }}">{{ course.name }}</a></h4>
 
-
-
-          <p class="card-text">Introduction to the UNIX command line. Topics covered will include navigating the filesystem, manipulating the environment, executing useful commands, and using pipes to communicate between programs. This session will teach you how to communicate directly with your computer’s operating system using a text-based interface and is a useful first step in learning many other technical skills. </p>
+          <p class="card-text">
+	    {{ course.description }}
+	  </p>
         </div>
       </div>
-      
-      <div class="card" id="git">
-        
-        <div class="card-block">
-          <div class="btn-group btn-group-sm pull-right" role="group" aria-label="Git">
-
-            <a href="/schedule.html" class="btn btn-primary"><i class="fa fa-calendar"></i></a>
-	    <a href="#page-top" class="btn btn-primary page-scroll"><i class="fa fa-code-fork"></i></a>
-            <!--a href="#page-top" class="btn btn-primary page-scroll"><i class="fa fa-chevron-up"></i></a-->
-            <a href="https://github.com/jojokarlin/Git_DRI_Jan_2017" class="btn btn-primary"><i class="fa fa-github"></i></a>
-          </div>
-          <h4 class="card-title"><a
-              href="#git">Git</a></h4>
-          <p class="card-text">Git is a tool for managing changes to a set of files. It allows users to access open source repositories, recover earlier versions of a project, and collaborate with other contributors. This session will be beneficial to anyone working with data, code, or text.</p>
-        </div>
-      </div>
-      
-      <div class="card" id="python">
-        
-        <div class="card-block">
-          <div class="btn-group btn-group-sm pull-right" role="group" aria-label="Python">
-
-            <a href="/schedule.html" class="btn btn-primary"><i class="fa fa-calendar"></i></a>
-	    <a href="#page-top" class="btn btn-primary page-scroll"><i class="fa icon-python"></i></a>
-            <!--a href="#page-top" class="btn btn-primary page-scroll"><i class="fa fa-chevron-up"></i></a-->
-            <a href="https://github.com/smythp/intro-python-workshop" class="btn btn-primary"><i class="fa fa-github"></i></a>
-          </div>
-          <h4 class="card-title"><a
-              href="#python">Python</a></h4>
-          <p class="card-text">Python is a programming language that can be used for a wide range of tasks, including collecting and analyzing data in a variety of formats, building web applications, and much more. It is likely the most popular language for academic researchers because of its flexibility and adaptability.</p>
-        </div>
-      </div>
-      
-      <div class="card" id="databases">
-        
-        <div class="card-block">
-          <div class="btn-group btn-group-sm pull-right" role="group" aria-label="Databases">
-
-            <a href="/schedule.html" class="btn btn-primary"><i class="fa fa-calendar"></i></a>
-	    <a href="#page-top" class="btn btn-primary page-scroll"><i class="fa fa-database"></i></a>
-            <!--a href="#page-top" class="btn btn-primary page-scroll"><i class="fa fa-chevron-up"></i></a-->
-            <a href="https://github.com/itphillips/GCDRI_databases" class="btn btn-primary"><i class="fa fa-github"></i></a>
-          </div>
-          <h4 class="card-title"><a
-              href="#databases">Databases</a></h4>
-          <p class="card-text">Databases are invaluable tools for organization and are better than a spreadsheet for working with multiple data sets, asking questions, and adding structure to your data. SQL is a programming language for working with databases. This workshop will introduce you to the basics of SQL, and will include hands-on practice creating databases and tables, importing data, and querying the database.</p>
-        </div>
-      </div>
-      
-      <div class="card" id="text">
-        
-        <div class="card-block">
-          <div class="btn-group btn-group-sm pull-right" role="group" aria-label="Text Analysis">
-
-            <a href="/schedule.html" class="btn btn-primary"><i class="fa fa-calendar"></i></a>
-	    <a href="#page-top" class="btn btn-primary page-scroll"><i class="fa fa-book"></i></a>
-            <!--a href="#page-top" class="btn btn-primary page-scroll"><i class="fa fa-chevron-up"></i></a-->
-            <a href="https://github.com/ssdd3/DigitalFellows" class="btn btn-primary"><i class="fa fa-github"></i></a>
-          </div>
-          <h4 class="card-title"><a
-              href="#text">Text Analysis</a></h4>
-          <p class="card-text">This session will introduce text analysis and text classification in Python using  The Natural Language Toolkit (NLTK) library and scikit-learn. Through attending this session, you will learn how to use Python to analyze large amounts of text (i.e., literary works, social media corpora, etc.) to find word frequencies, collocations, and learn the basics of text classification with machine learning.  This session is designed for researchers who work with various forms of text-based data.</p>
-        </div>
-      </div>
-      
-      <div class="card" id="map">
-        
-        <div class="card-block">
-          <div class="btn-group btn-group-sm pull-right" role="group" aria-label="Mapping">
-
-            <a href="/schedule.html" class="btn btn-primary"><i class="fa fa-calendar"></i></a>
-	    <a href="#page-top" class="btn btn-primary page-scroll"><i class="fa fa-map-marker"></i></a>
-            <!--a href="#page-top" class="btn btn-primary page-scroll"><i class="fa fa-chevron-up"></i></a-->
-            <a href="https://github.com/GCDigitalFellows/Mapping" class="btn btn-primary"><i class="fa fa-github"></i></a>
-          </div>
-          <h4 class="card-title"><a
-              href="#map">Mapping</a></h4>
-          <p class="card-text">This session introduces simple yet powerful ways of displaying spatial information through CartoDB and QGIS. This session will be of particular interest both to researchers working with spatial information as well as anyone interested in storytelling with maps. </p>
-        </div>
-      </div>
-      
-      <div class="card" id="ml">
-        
-        <div class="card-block">
-          <div class="btn-group btn-group-sm pull-right" role="group" aria-label="Quantitative
- Analysis">
-
-            <a href="/schedule.html" class="btn btn-primary"><i class="fa fa-calendar"></i></a>
-	    <a href="#page-top" class="btn btn-primary page-scroll"><i class="fa fa-bar-chart"></i></a>
-            <!--a href="#page-top" class="btn btn-primary page-scroll"><i class="fa fa-chevron-up"></i></a-->
-            <a href="https://github.com/GCDigitalFellows/gcdri_ts_cat_ml" class="btn btn-primary"><i class="fa fa-github"></i></a>
-          </div>
-          <h4 class="card-title"><a
-              href="#ml">Quantitative
- Analysis</a></h4>
-          <p class="card-text">This session will introduce data aggregation and preprocessing,  dimension reduction, and supervised and unsupervised machine learning using the Python numpy and  sklearn machine learning libraries. This session is aimed towards researchers who want to find patterns in their data or use their data to predict a phenomena. </p>
-        </div>
-      </div>
-      
-      <div class="card" id="html">
-        
-        <div class="card-block">
-          <div class="btn-group btn-group-sm pull-right" role="group" aria-label="HTML and CSS">
-
-            <a href="/schedule.html" class="btn btn-primary"><i class="fa fa-calendar"></i></a>
-	    <a href="#page-top" class="btn btn-primary page-scroll"><i class="fa fa-code"></i></a>
-            <!--a href="#page-top" class="btn btn-primary page-scroll"><i class="fa fa-chevron-up"></i></a-->
-            <a href="https://github.com/GCDigitalFellows/Jan17-HTMLCSS" class="btn btn-primary"><i class="fa fa-github"></i></a>
-          </div>
-          <h4 class="card-title"><a
-              href="#html">HTML and CSS</a></h4>
-          <p class="card-text">Modern web pages are created using HTML to control content, CSS to control appearance, and JavaScript to dictate behavior. This session will be helpful for anyone that wants to build on the web.</p>
-        </div>
-      </div>
-      
-      <div class="card" id="twit">
-        
-        <div class="card-block">
-          <div class="btn-group btn-group-sm pull-right" role="group" aria-label="Twitter API">
-
-            <a href="/schedule.html" class="btn btn-primary"><i class="fa fa-calendar"></i></a>
-	    <a href="#page-top" class="btn btn-primary page-scroll"><i class="fa fa-twitter"></i></a>
-            <!--a href="#page-top" class="btn btn-primary page-scroll"><i class="fa fa-chevron-up"></i></a-->
-            <a href="https://github.com/smythp/twitter-workshop" class="btn btn-primary"><i class="fa fa-github"></i></a>
-          </div>
-          <h4 class="card-title"><a
-              href="#twit">Twitter API</a></h4>
-          <p class="card-text">This session will cover the basics of accessing data via the Twitter API. including specific challenges that arise when working with large, text-based data sets. This session will be beneficial for anyone who wants to collect data from Twitter or other social networks. </p>
-        </div>
-      </div>
-      
-      <div class="card" id="ethics">
-        
-        <div class="card-block">
-          <div class="btn-group btn-group-sm pull-right" role="group" aria-label="Digital Ethics">
-
-            <a href="/schedule.html" class="btn btn-primary"><i class="fa fa-calendar"></i></a>
-	    <a href="#page-top" class="btn btn-primary page-scroll"><i class="fa fa-hand-peace-o
-"></i></a>
-            <!--a href="#page-top" class="btn btn-primary page-scroll"><i class="fa fa-chevron-up"></i></a-->
-            <a href="https://github.com/kchatlosh/Ethics_DRI_Jan_2017" class="btn btn-primary"><i class="fa fa-github"></i></a>
-          </div>
-          <h4 class="card-title"><a
-              href="#ethics">Digital Ethics</a></h4>
-          <p class="card-text">A discussion of digital ethics with an emphasis on social justice, transparency, and accessibility.</p>
-        </div>
-      </div>
-      
     </div>
   </div>
+{% endfor %}
 </section>
